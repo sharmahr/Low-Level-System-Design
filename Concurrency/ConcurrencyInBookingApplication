@@ -1,0 +1,59 @@
+package concurrency;
+
+// https://leetcode.com/discuss/interview-question/2658341/Concurrency-in-an-Booking-application-like-Flipkart-BookMyShow
+
+/*
+ How do we handle the concurrency in application side? we will not be making our service synchronized right ? because that will effect our performance and slowness in the booking..
+Copy codepublic void synchronized blockInventory(){
+	//decrementing the inventory count
+}
+eg: One person is booking a hotel for today and other person is trying to book a hotel for tomorrow. As the above two cases can be run concurrently right ? How do we implement concurrency in the above case ?
+ */
+
+/*
+ Making the entire service synchronized would impact performance and cause slowness in the booking process. Instead, you can handle concurrency at a finer granularity, such as at the inventory level or using optimistic locking techniques. Here are a few approaches you can consider:
+
+ Optimistic Locking:
+ Instead of using synchronized methods, you can implement optimistic locking using version control.
+ Each inventory item can have a version number associated with it.
+ When updating the inventory, you check if the version number matches the expected version. If it does, you proceed with the update and increment the version number. If it doesn't match, it means the inventory has been modified by another transaction, and you can handle it accordingly (e.g., retry the transaction or show an error message).
+ Here's an example:
+*/
+
+public void blockInventory(int inventoryId, int quantity, long version) {
+     Inventory inventory = inventoryRepository.findById(inventoryId);
+     if (inventory.getVersion() == version) {
+         inventory.setQuantity(inventory.getQuantity() - quantity);
+         inventory.setVersion(version + 1);
+         inventoryRepository.save(inventory);
+     } else {
+         // Handle version mismatch, e.g., retry or show an error message
+     }
+ }
+ 
+ Pessimistic Locking:
+ Instead of using synchronized methods, you can utilize database-level locking mechanisms.
+ When updating the inventory, you can acquire a lock on the specific inventory record using a locking query or a pessimistic lock.
+ This ensures that only one transaction can modify the inventory at a time, preventing concurrent modifications.
+ Here's an example using JPA's @Lock annotation:
+
+@Lock(LockModeType.PESSIMISTIC_WRITE)
+ public void blockInventory(int inventoryId, int quantity) {
+     Inventory inventory = inventoryRepository.findById(inventoryId);
+     inventory.setQuantity(inventory.getQuantity() - quantity);
+     inventoryRepository.save(inventory);
+ }
+ 
+ 
+ Atomic Updates:
+ If your database supports atomic update operations, you can leverage them to update the inventory count without the need for explicit locking.
+ For example, in SQL, you can use the UPDATE statement with a WHERE clause that checks the current inventory count and updates it atomically.
+ Here's an example using Spring Data JPA's @Modifying annotation:
+ 
+ @Modifying
+ @Query("UPDATE Inventory i SET i.quantity = i.quantity - :quantity WHERE i.id = :inventoryId AND i.quantity >= :quantity")
+ public int blockInventory(@Param("inventoryId") int inventoryId, @Param("quantity") int quantity);
+ 
+ In the case of booking a hotel for today and tomorrow concurrently, you can apply any of the above approaches based on your specific requirements and the capabilities of your database.
+ For example, using optimistic locking, each booking transaction would check the version of the inventory before updating it. If the versions match, the booking proceeds, and the inventory is decremented. If the versions don't match, the booking can be retried or an error message can be shown to the user.
+ Remember to handle concurrency at the appropriate level of granularity, such as per inventory item or per hotel, rather than synchronizing the entire service. This allows for better performance and concurrency while ensuring data integrity.

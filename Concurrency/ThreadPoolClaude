@@ -1,0 +1,127 @@
+package concurrency;
+
+// Implement a thread-safe threadpool:
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+
+/**
+ * The ThreadPool class represents a thread pool that manages a fixed number of worker threads.
+ * It allows tasks to be submitted for execution and efficiently manages the distribution of tasks
+ * among the worker threads.
+ */
+public class ThreadPool {
+    private final BlockingQueue<Runnable> workQueue;
+    private final List<WorkerThread> threads;
+    private boolean isShutdown;
+
+    /**
+     * Constructs a new ThreadPool with the specified number of threads.
+     *
+     * @param numThreads the number of worker threads in the thread pool
+     */
+    public ThreadPool(int numThreads) {
+        this.workQueue = new ArrayBlockingQueue<>(numThreads);
+        this.threads = new ArrayList<>(numThreads);
+        this.isShutdown = false;
+
+        // Create and start the worker threads
+        for (int i = 0; i < numThreads; i++) {
+            WorkerThread thread = new WorkerThread();
+            threads.add(thread);
+            thread.start();
+        }
+    }
+
+    /**
+     * Submits a task to the thread pool for execution.
+     *
+     * @param task the task to be executed
+     * @throws IllegalStateException if the thread pool is shut down
+     */
+    public void execute(Runnable task) {
+        synchronized (workQueue) {
+            if (isShutdown) {
+                throw new IllegalStateException("Thread pool is shut down");
+            }
+            workQueue.add(task);
+            workQueue.notify();
+        }
+    }
+
+    /**
+     * Shuts down the thread pool gracefully.
+     * It stops accepting new tasks and waits for all the worker threads to complete their current tasks.
+     */
+    public void shutdown() {
+        synchronized (workQueue) {
+            isShutdown = true;
+            workQueue.notifyAll();
+        }
+
+        // Wait for all worker threads to complete
+        for (WorkerThread thread : threads) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * The WorkerThread class represents a worker thread in the thread pool.
+     * It continuously polls tasks from the work queue and executes them.
+     */
+    private class WorkerThread extends Thread {
+        @Override
+        public void run() {
+            while (true) {
+                Runnable task;
+                synchronized (workQueue) {
+                    // Wait for a task if the queue is empty and the thread pool is not shut down
+                    while (workQueue.isEmpty() && !isShutdown) {
+                        try {
+                            workQueue.wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    // If the thread pool is shut down and the queue is empty, exit the loop
+                    if (isShutdown && workQueue.isEmpty()) {
+                        break;
+                    }
+
+                    // Poll a task from the work queue
+                    task = workQueue.poll();
+                }
+
+                // Execute the task
+                try {
+                    task.run();
+                } catch (RuntimeException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Output:
+ * 
+ * Explanation:
+ * 
+ * The ThreadPool class represents the thread pool. It has a blocking queue (workQueue) to store the tasks and a list of worker threads (threads).
+ * The constructor takes the number of threads as a parameter and initializes the work queue and worker threads. It creates and starts the worker threads.
+ * The execute method is used to submit a task to the thread pool. It adds the task to the work queue in a synchronized block to ensure thread safety. If the thread pool is shut down, it throws an IllegalStateException.
+ * The shutdown method is used to gracefully shut down the thread pool. It sets the isShutdown flag to true and notifies all waiting threads. It then joins each worker thread to wait for their completion.
+ * The WorkerThread class represents a worker thread in the thread pool. It continuously polls tasks from the work queue and executes them.
+ * Inside the run method of the worker thread, it uses a synchronized block to check if the work queue is empty and the thread pool is not shut down. If so, it waits for a task to be added to the queue using workQueue.wait().
+ * If the thread pool is shut down and the work queue is empty, the worker thread breaks out of the loop and terminates.
+ * If a task is available, the worker thread polls it from the work queue and executes it by calling task.run(). Any exceptions thrown during task execution are caught and printed.
+ * This implementation ensures thread safety by using synchronized blocks and the blocking queue to coordinate access to shared resources. The thread pool can be used to efficiently manage
+ */
+
