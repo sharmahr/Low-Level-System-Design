@@ -1,4 +1,42 @@
 # Low-Level-System-Design
+
+## 📌 Fundamental Concepts
+- [Basics OOP Concepts](https://blog.algomaster.io/p/basic-oop-concepts-explained-with-code)
+- [SOLID Principles with Pictures](https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898)
+- [SOLID Principles with Code](https://blog.algomaster.io/p/solid-principles-explained-with-code)
+- [DRY Principle](https://blog.algomaster.io/p/082450d8-0e7b-4447-a8dc-b7308e45f048)
+- [YAGNI Principle](https://blog.algomaster.io/p/8c3c7da7-885b-4a9c-a6e4-70ee02de4772)
+- [KISS Principle](https://blog.algomaster.io/p/21b57678-b351-4ed4-b390-3b6308af2f7d)
+- [Coursera - Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design)
+
+## ⚙️ Design Patterns
+### Creational Patterns
+- [Singleton](https://blog.algomaster.io/p/5c049814-a3d6-4f73-b4c5-a831c503e897)
+- [Factory Method](https://refactoring.guru/design-patterns/factory-method)
+- [Abstract Factory](https://refactoring.guru/design-patterns/abstract-factory)
+- [Builder](https://refactoring.guru/design-patterns/builder)
+### Structural Patterns
+- [Adapter](https://refactoring.guru/design-patterns/adapter)
+- [Facade](https://refactoring.guru/design-patterns/facade)
+- [Decorator](https://refactoring.guru/design-patterns/decorator)
+- [Composite](https://refactoring.guru/design-patterns/composite)
+### Behavioral Patterns
+- [Strategy](https://refactoring.guru/design-patterns/strategy)
+- [Iterator](https://refactoring.guru/design-patterns/iterator)
+- [Observer](https://refactoring.guru/design-patterns/observer)
+- [Template Method](https://refactoring.guru/design-patterns/template-method)
+- [Command](https://refactoring.guru/design-patterns/command)
+- [State](https://refactoring.guru/design-patterns/state)
+
+## 🗂️ UML
+- [Class Diagram](https://blog.algomaster.io/p/uml-class-diagram-explained-with-examples)
+- [Use Case Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-use-case-diagram/)
+- [Sequence Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-sequence-diagram/)
+- [Activity Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/)
+- [State Machine Diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-state-machine-diagram/)
+
+
+# Overview
 Low Level System Design
 
 1. Classes and Objects:
@@ -554,3 +592,13 @@ When to use an interface or an abstract class:
 - Use an abstract class when you want to provide a base implementation that subclasses can inherit from and extend. Abstract classes are useful when you have common functionality that needs to be shared among related classes, and you want to enforce a certain level of inheritance.
 
 It's important to note that a class can implement multiple interfaces but can only extend a single class (abstract or concrete). This allows for a form of multiple inheritance through interfaces while avoiding the complexities of multiple inheritance of classes.
+
+
+## 📚 Books
+- [Head First Design Patterns](https://www.amazon.com/Head-First-Design-Patterns-Object-Oriented/dp/149207800X/)
+- [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/B08X8ZXT15)
+- [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature/dp/0134757599/)
+
+## Additional resources
+- [Coursera - Design Patterns](https://www.coursera.org/learn/design-patterns)
+- [Github - Awesome Design Patterns](https://github.com/DovAmir/awesome-design-patterns)
