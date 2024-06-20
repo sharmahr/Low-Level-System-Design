@@ -10,7 +10,7 @@
 7. The machine should handle multiple user requests concurrently and ensure thread safety.
 
 ## Java Implementation
-[Full Code](../solutions/java/src/coffeevendingmachine/)
+[Full Code](../solutions/easy/05-design-coffee-vending-machine.md)
 
 1. The Coffee class represents a coffee type with its name, price, and recipe (ingredients and their quantities).
 2. The Ingredient class represents an ingredient used in making coffee, with its name and quantity. It provides a synchronized method to update the quantity.

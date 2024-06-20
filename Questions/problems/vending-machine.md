@@ -10,7 +10,7 @@
 1. The machine should handle exceptional scenarios, such as insufficient funds or out-of-stock products.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/vendingmachine/)
+[Full Code](../solutions/easy/02-design-vending-machine.md)
 
 1. The Product class represents a product in the vending machine, with properties such as name and price.
 2. The Coin and Note enums represent the different denominations of coins and notes accepted by the vending machine.

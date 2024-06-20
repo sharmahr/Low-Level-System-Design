@@ -9,7 +9,7 @@
 6. It should be extensible to accommodate new log levels and output destinations in the future.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/loggingframework/)
+[Full Code](../solutions/easy/04-design-logging-framework.md)
 
 1. The LogLevel enum defines the different log levels supported by the logging framework.
 2. The LogMessage class represents a log message with a timestamp, log level, and message content.

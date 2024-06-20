@@ -9,7 +9,7 @@
 6. The system should be scalable and extensible to support additional features and functionality.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/trafficsignalsystem/)
+[Full Code](../solutions/easy/06-design-traffic-signal-control-system.md)
 
 1. The Signal enum represents the different states of a traffic light: red, yellow, and green.
 2. The Road class represents a road in the traffic signal system, with properties such as ID, name, and an associated traffic light.

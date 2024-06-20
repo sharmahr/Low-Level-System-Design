@@ -10,7 +10,7 @@
 7. The system should handle concurrent access and ensure data consistency.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/stackoverflow/)
+[Full Code](../solutions/easy/03-design-stack-overflow.md)
 
 1. The User class represents a user of the Stack Overflow system, with properties such as ID, username, password, email, and reputation.
 2. The Question class represents a question posted by a user, with properties such as ID, title, body, author, answers, comments, tags, and vote count.
