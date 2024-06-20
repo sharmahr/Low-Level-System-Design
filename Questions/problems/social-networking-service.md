@@ -29,7 +29,7 @@
 - The system should be scalable and efficient in terms of resource utilization.
 
 ### Java Implementation
-[Java Code](../solutions/java/src/socialnetworkingservice/)
+[Java Code](../solutions/medium/07-design-facebook.md)
 
 1. The User class represents a user in the social networking system, containing properties such as ID, name, email, password, profile picture, bio, list of friends, and list of posts.
 2. The Post class represents a post created by a user, containing properties such as ID, user ID, content, image URLs, video URLs, timestamp, likes, and comments.

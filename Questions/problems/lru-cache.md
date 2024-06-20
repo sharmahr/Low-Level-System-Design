@@ -9,7 +9,7 @@
 4. The cache should be efficient in terms of time complexity for both put and get operations, ideally O(1).
 
 ### Java Implementation
-[Full Code](../solutions/java/src/stackoverflow/)
+[Full Code](../solutions/medium/15-design-cache-using-lru-eviction.md)
 
 1. The Node class represents a node in the doubly linked list, containing the key, value, and references to the previous and next nodes.
 2. The LRUCache class implements the LRU cache functionality using a combination of a hash map (cache) and a doubly linked list (head and tail).

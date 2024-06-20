@@ -9,7 +9,7 @@
 6. The ATM should have a user-friendly interface for users to interact with.
 
 ### Java Implementation
-[Full code](../solutions/java/src/atm/)
+[Full code](../solutions/medium/04-design-atm.md)
 
 1. The Card class represents an ATM card with a card number and PIN.
 2. The Account class represents a bank account with an account number and balance. It provides methods to debit and credit the account balance.

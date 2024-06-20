@@ -11,7 +11,7 @@
 8. The system should be scalable to handle a large number of users and transactions.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/digitalwallet/)
+[Full Code](../solutions/medium/12-design-digital-wallet-system.md)
 
 1. The User class represents a user of the digital wallet, with properties such as ID, name, email, password, and a list of accounts.
 2. The Account class represents a user's account within the digital wallet, with properties like ID, user, account number, currency, balance, and a list of transactions. It provides methods to deposit and withdraw funds.

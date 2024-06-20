@@ -10,7 +10,7 @@
 7. The game should detect and announce the winner or a draw at the end of the game.
 
 ### Java Implementation
-[Java Code](../solutions/java/src/tictactoe/)
+[Java Code](../solutions/medium/02-design-tic-tac-toe-game.md)
 
 1. The Player class represents a player in the game, with a name and a symbol (X or O).
 2. The Board class represents the game board, which is a 3x3 grid. It provides methods to make moves, check for a winner, and check if the board is full.

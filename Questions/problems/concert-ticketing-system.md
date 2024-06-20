@@ -11,7 +11,7 @@
 8. The system should provide a waiting list functionality for sold-out concerts.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/concertbookingsystem/)
+[Full Code](../solutions/medium/14-design-concert-ticket-booking-system.md)
 
 1. The Concert class represents a concert event, with properties such as ID, artist, venue, date and time, and a list of seats.
 2. The Seat class represents a seat in a concert, with properties like ID, seat number, seat type, price, and status. It provides methods to book and release a seat.

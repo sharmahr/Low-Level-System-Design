@@ -10,7 +10,7 @@
 7. The system should handle concurrent access and ensure data consistency.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/restaurantmanagementsystem/)
+[Full Code](../solutions/medium/10-design-restaurant-management-system.md)
 
 1. The MenuItem class represents a menu item in the restaurant, with properties such as ID, name, description, price, and availability.
 2. The Order class represents an order placed by a customer, with properties such as ID, list of menu items, total amount, order status, and timestamp.

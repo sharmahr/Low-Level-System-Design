@@ -10,7 +10,7 @@
 7. The system should ensure thread safety and prevent race conditions when multiple threads interact with the elevators.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/elevatorsystem/)
+[Full Code](../solutions/medium/08-design-an-elevator.md)
 
 1. The Direction enum represents the possible directions of elevator movement (UP or DOWN).
 2. The Request class represents a user request for an elevator, containing the source floor and destination floor.

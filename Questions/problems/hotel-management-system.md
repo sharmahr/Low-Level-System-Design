@@ -11,7 +11,7 @@
 8. The system should be scalable and handle a large number of rooms and guests.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/hotelmanagement/)
+[Full Code](../solutions/medium/05-design-hotel-management-system.md)
 
 1. The Guest class represents a guest of the hotel, with properties such as ID, name, email, and phone number.
 2. The Room class represents a room in the hotel, with properties like ID, room type, price, and status. It provides methods to book, check-in, and check-out a room.

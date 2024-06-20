@@ -9,7 +9,7 @@
 6. The Pub-Sub system should be scalable and efficient in terms of message delivery.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/pubsubsystem/)
+[Full Code](../solutions/medium/01-design-pub-sub-system.md)
 
 1. The Message class represents a message that can be published and received by subscribers. It contains the message content.
 2. The Topic class represents a topic to which messages can be published. It maintains a set of subscribers and provides methods to add and remove subscribers, as well as publish messages to all subscribers.

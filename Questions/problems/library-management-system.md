@@ -11,7 +11,7 @@
 8. The system should be extensible to accommodate future enhancements and new features.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/librarymanagementsystem/)
+[Full Code](../solutions/medium/09-library-management-system.md)
 
 1. The Book class represents a book in the library catalog, with properties such as ISBN, title, author, publication year, and availability status.
 2. The Member class represents a library member, with properties like member ID, name, contact information, and a list of borrowed books.
