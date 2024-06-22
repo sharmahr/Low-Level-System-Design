@@ -11,7 +11,7 @@
 8. The system should handle concurrent transactions and ensure data consistency.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/splitwise/)
+[Full Code](../solutions/hard/02-design-splitwise.md)
 
 1. The User class represents a user in the Splitwise system, with properties such as ID, name, email, and a map to store balances with other users.
 2. The Group class represents a group in Splitwise, containing a list of member users and a list of expenses.

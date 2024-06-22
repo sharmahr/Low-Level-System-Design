@@ -11,7 +11,7 @@
 8. The system should handle concurrent requests and ensure data consistency.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/ridesharingservice)
+[Full Code](../solutions/hard/08-design-ride-sharing-service.md)
 
 1. The Passenger class represents a passenger in the ride sharing service, with properties such as ID, name, contact information, and location.
 2. The Driver class represents a driver in the ride sharing service, with properties such as ID, name, contact information, license plate, location, and status (available or busy).

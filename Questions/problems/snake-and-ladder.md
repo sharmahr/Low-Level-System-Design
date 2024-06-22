@@ -11,7 +11,7 @@
 8. The game should handle multiple game sessions concurrently, allowing different groups of players to play independently.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/snakeandladdergame)
+[Full Code](../solutions/hard/03-design-snake-ladder-game.md)
 
 1. The Board class represents the game board with a fixed size (e.g., 100 cells). It contains the positions of snakes and ladders and provides methods to initialize them and retrieve the new position after encountering a snake or ladder.
 2. The Player class represents a player in the game, with properties such as name and current position on the board.

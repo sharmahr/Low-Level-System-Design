@@ -11,7 +11,7 @@
 8. The system should be scalable to handle a large number of concurrent users and bookings.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/movieticketbookingsystem/)
+[Full Code](../solutions/hard/01-design-movie-ticket-booking-system.md)
 
 1. The Movie class represents a movie with properties such as ID, title, description, and duration.
 2. The Theater class represents a theater with properties such as ID, name, location, and a list of shows.

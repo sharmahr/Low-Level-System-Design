@@ -11,7 +11,7 @@
 8. The system should be extensible to accommodate new features and enhancements in the future.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/cricinfo/)
+[Full Code](../solutions/hard/06-design-cricinfo.md)
 
 1. The Match class represents a cricket match, with properties such as ID, title, venue, start time, teams, status, and scorecard.
 2. The Team class represents a cricket team, with properties like ID, name, and a list of players.

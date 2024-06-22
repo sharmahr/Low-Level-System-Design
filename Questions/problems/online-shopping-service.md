@@ -11,7 +11,7 @@
 8. The system should provide a user-friendly interface for a seamless shopping experience.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/onlineshopping/)
+[Full Code](../solutions/hard/04-design-online-shopping-system.md)
 
 1. The User class represents a user in the online shopping service, with properties such as ID, name, email, password, and a list of orders.
 2. The Product class represents a product available for purchase, with properties like ID, name, description, price, and quantity. It provides methods to update the quantity and check product availability.

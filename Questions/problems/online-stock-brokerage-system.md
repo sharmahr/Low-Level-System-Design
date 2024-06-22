@@ -11,7 +11,7 @@
 8. The system should be secure and protect sensitive user information.
 
 ## Java Implementation
-[Full Code](../solutions/java/src/onlinestockbrokeragesystem/)
+[Full Code](../solutions/hard/05-design-online-brokerage-system.md)
 
 1. The User class represents a user of the stock brokerage system, with properties such as user ID, name, and email.
 2. The Account class represents a user's trading account, with properties like account ID, associated user, and balance. It provides methods for depositing and withdrawing funds.

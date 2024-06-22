@@ -11,7 +11,7 @@
 8. The game should provide a user interface for players to interact with the game.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/chessgame/)
+[Full Code](../solutions/hard/07-design-chess-game.md)
 
 1. The Piece class is an abstract base class representing a chess piece. It contains common attributes such as color, row, and column, and declares an abstract method canMove to be implemented by each specific piece class.
 2. The King, Queen, Rook, Bishop, Knight, and Pawn classes extend the Piece class and implement their respective movement logic in the canMove method.

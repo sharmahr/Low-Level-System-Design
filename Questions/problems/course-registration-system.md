@@ -10,7 +10,7 @@
 7. The system should be extensible to accommodate future enhancements and new features.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/courseregistrationsystem/)
+[Full Code](../solutions/hard/11-design-university-course-registration-service.md)
 
 1. The Student class represents a student in the course registration system, with properties such as ID, name, email, and a list of registered courses.
 2. The Course class represents a course offered in the system, with properties such as code, name, instructor, maximum capacity, and the number of enrolled students.

@@ -11,7 +11,7 @@
 8. The system should provide real-time notifications to customers, restaurants, and delivery agents.
 
 ### Java Implementation
-[Full Code](../solutions/java/src/fooddeliveryservice/)
+[Full Code](../solutions/hard/09-design-online-food-delivery.md)
 
 1. The Customer class represents a customer who can place orders. It contains customer details such as ID, name, email, and phone number.
 2. The Restaurant class represents a restaurant that offers menu items. It contains restaurant details such as ID, name, address, and a list of menu items. It provides methods to add and remove menu items.
